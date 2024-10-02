@@ -9,6 +9,7 @@ import type { LinksFunction } from "@remix-run/node";
 import {NextUIProvider} from "@nextui-org/react";
 
 import "./tailwind.css";
+import NavBar from "./shared/components/NavBar_Components/NavBar";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,12 +33,16 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="relative">
+          <div className="  bg-white text-black dark:bg-black dark:text-white duration-200">
+        <NavBar/>
         <NextUIProvider>
+
         {children}
         <ScrollRestoration />
         <Scripts />
         </NextUIProvider>
+          </div>
       </body>
     </html>
   );
