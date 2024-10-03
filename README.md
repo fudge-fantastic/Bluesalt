@@ -79,7 +79,3 @@ export default function App() {
   );
 }
 ```
-
----
-
-# 📖 Application

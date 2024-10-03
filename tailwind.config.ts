@@ -33,5 +33,5 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui(), require('daisyui')],
 } satisfies Config;

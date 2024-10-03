@@ -1,7 +1,7 @@
-export default function Resume() {
+export default function Contact() {
     return (
-        <div>
-            <h1 className = "text-3xl text-center font-semibold">This is a Resume Page</h1>
+        <div className="min-h-screen">
+            <h1 className = "text-3xl text-center font-semibold py-20">This is a Contact Page</h1>
         </div>
     );
 }
