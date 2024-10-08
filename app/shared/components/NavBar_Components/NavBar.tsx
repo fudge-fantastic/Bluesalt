@@ -15,12 +15,12 @@ export default function NavBar() {
   return (
       // Removed utilities: sticky top-0 
       <nav className="bg-white text-black dark:bg-black dark:text-white duration-200">
-          <div  className="flex justify-between px-8 py-4">
+          <div  className="flex justify-between px-10 py-4 md:justify-around">
             <div className="text-xl font-bold flex items-center gap-4 uppercase">
               <div className='w-8 h-8'>
               <img src={dark ? "valknut_white.svg" : "valknut.svg"} alt="logo" className="duration-200" />
               </div>
-              <p>BlueSalt</p>
+              <p className='max-md:hidden'>BlueSalt</p>
             </div>
 
             {/* The md:block will make the NavBar disappear on mobile */}
@@ -36,8 +36,8 @@ export default function NavBar() {
             </div>
 
             <div className="items-center flex gap-4">
-              <Button size= "lg" variant="flat" className="text-md font-semibold" >CV</Button>  
-              <Button isIconOnly size="lg" variant="flat" className="" onClick={darkModeHandler}>
+              <Button isIconOnly size= "lg" variant="flat" className='font-semibold'>CV</Button>
+              <Button isIconOnly size="lg" variant="flat" onClick={darkModeHandler}>
                 {dark ? (<img src="sun.svg" alt="Light Mode" className="w-5 h-5" />) : (<img src="moon.svg" alt="Dark Mode" className="w-5 h-5" />)}
               </Button> 
               {/* <Button size= "md" variant="shadow" className="text-md font-semibold">Sign up</Button>   */}

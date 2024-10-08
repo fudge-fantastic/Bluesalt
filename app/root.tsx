@@ -10,7 +10,7 @@ import {NextUIProvider} from "@nextui-org/react";
 
 import "./tailwind.css";
 import NavBar from "./shared/components/NavBar_Components/NavBar";
-import Footer from "./shared/components/NavBar_Components/Footer";
+import Footer from "./shared/components/Footer";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,16 +36,16 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
         <script src="./node_modules/lodash/lodash.min.js"></script>
         <script src="./node_modules/dropzone/dist/dropzone-min.js"></script>
       </head>
-      <body className="relative">
-        <div className="  bg-white text-black dark:bg-black dark:text-white duration-200">
-        <NavBar/>
-        <NextUIProvider>
+      <body className="relative min-h-screen">
+        <div className="bg-white text-black dark:bg-black dark:text-white duration-200">
+          <NavBar/>
+          <NextUIProvider>
 
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-        </NextUIProvider>
-        <Footer />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          </NextUIProvider>
+          <Footer />
         </div>
       </body>
     </html>

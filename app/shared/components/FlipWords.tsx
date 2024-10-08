@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion} from "framer-motion";
 import { cn } from "./../libs/utils";
 
@@ -51,8 +51,8 @@ export const FlipWords = ({
         }}
         exit={{
           opacity: 0,
-        //   y: -40,
-        //   x: 40,
+          y: -40,
+          x: 40,
         //   Original was 8px
           filter: "blur(8px)",
           scale: 3,
